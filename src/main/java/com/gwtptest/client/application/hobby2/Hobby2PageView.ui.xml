@@ -1,0 +1,78 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'
+            xmlns:dp="urn:import:com.google.gwt.user.datepicker.client"
+             >
+
+    <ui:with field="resources" type="com.gwtptest.client.resources.AppResources"/>
+
+    <ui:style>
+        .holder {
+            width: 100%;
+            height: 100%;
+        }
+
+        .hobby {
+        }
+
+        .hobby-title {
+            font-weight: bold;
+            font-size: 18px;
+            vertical-align: top;
+        }
+
+        .final-row {
+            text-align: center;
+        }
+
+        .labels {
+            font-size: 20px;
+            text-align: right;
+            vertical-align: middle;
+        }
+
+        .form-holder {
+            border: 2px solid grey;
+            padding: 8px;
+        }
+
+        .image {
+            vertical-align: middle;
+        }
+        .image:hover {
+            cursor: pointer;
+        }
+
+        .fields {
+            vertical-align: middle;
+            font-size: 16px;
+        }
+    </ui:style>
+    <g:HTMLPanel styleName="{style.holder}">
+        <g:VerticalPanel styleName="{style.hobby}">
+            <g:HTMLPanel styleName="{style.hobby-title}">
+                Travel
+            </g:HTMLPanel>
+            <g:FormPanel>
+                <g:HTMLPanel styleName="{style.form-holder}">
+                    <table>
+                        <tbody>
+                    <tr>
+                        <td class="{style.labels}">Name</td>
+                        <td colspan="2"><g:TextBox ui:field="nameField" styleName="{style.fields}" width="98%"></g:TextBox></td>
+                    </tr>
+                    <tr>
+                        <td class="{style.labels}">Started</td>
+                        <td><dp:DateBox ui:field="dateField" styleName="{style.fields}"></dp:DateBox></td>
+                        <td><g:Image resource="{resources.cal}" styleName="{style.image}" ui:field="calImg"></g:Image></td>
+                    </tr>
+                    <tr class="{style.final-row}">
+                        <td colspan="3"><g:Button ui:field="sendButton"  styleName="{style.fields}">Reset Form</g:Button></td>
+                    </tr>
+                        </tbody>
+                    </table>
+                </g:HTMLPanel>
+            </g:FormPanel>
+        </g:VerticalPanel>
+    </g:HTMLPanel>
+
+</ui:UiBinder>

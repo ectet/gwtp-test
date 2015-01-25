@@ -1,0 +1,59 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+    <ui:with field="resources" type="com.gwtptest.client.resources.AppResources"/>
+
+    <ui:style>
+        .holder {
+            width: 100%;
+        }
+
+        .hobbies {
+            height: 84px;
+        }
+
+        .hobby {
+            margin-left: 8px;
+        }
+
+        .hobby-title {
+            font-weight: bold;
+            font-size: 18px;
+            vertical-align: top;
+        }
+
+        .hobby-body {
+            font-size: 14px;
+            color: grey;
+            vertical-align: top;
+        }
+
+    </ui:style>
+
+        <g:HorizontalPanel styleName="{style.holder}">
+            <g:HorizontalPanel styleName="{style.hobbies}">
+                <g:Image resource="{resources.reading}"></g:Image>
+                <g:VerticalPanel styleName="{style.hobby}">
+                    <g:HTMLPanel styleName="{style.hobby-title}">
+                        Reading
+                    </g:HTMLPanel>
+                    <g:HTMLPanel styleName="{style.hobby-body}">
+                        Reading is a complex cognitive process of decoding symbols in order to construct or derive meaning.
+                    </g:HTMLPanel>
+                </g:VerticalPanel>
+            </g:HorizontalPanel>
+            <g:HTMLPanel width="8"></g:HTMLPanel>
+            <g:HorizontalPanel styleName="{style.hobbies}">
+                <g:Image resource="{resources.travel}"></g:Image>
+                <g:VerticalPanel styleName="{style.hobby}">
+                    <g:HTMLPanel styleName="{style.hobby-title}">
+                        Travel
+                    </g:HTMLPanel>
+                    <g:HTMLPanel styleName="{style.hobby-body}">
+                        Travel is the movement of people between relatively distant geographical locations.
+                    </g:HTMLPanel>
+                </g:VerticalPanel>
+            </g:HorizontalPanel>
+        </g:HorizontalPanel>
+
+</ui:UiBinder>
